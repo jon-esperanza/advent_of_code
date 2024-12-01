@@ -1,3 +1,6 @@
-## Python Project
+# Advent of Code
 
-Welcome to your new python project
+## 2024 Progress
+1 out of 25 complete
+
+Star count: 2
