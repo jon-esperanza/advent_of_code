@@ -1,4 +1,4 @@
-from inputs.input import read_input
+from input import read_input
 
 
 def parse_input(lines):
