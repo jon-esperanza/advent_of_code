@@ -19,3 +19,8 @@ clean:
 .PHONY: deps
 deps:
 	pipenv install --dev
+
+.PHONY: day
+day:
+	./advent_of_code/2024/scripts/new_day.sh "$(DAY)"
+	make fmt
