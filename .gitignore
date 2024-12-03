@@ -9,6 +9,38 @@ __pycache__/
 # C extensions
 *.so
 
+# C++
+**compiled/
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.o
+*.obj
+*.lo
+*.ko
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
 # Distribution / packaging
 .Python
 build/
