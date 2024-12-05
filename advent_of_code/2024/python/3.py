@@ -1,5 +1,6 @@
-from util.advent_of_code import AdventOfCode
 import re
+
+from util.advent_of_code import AdventOfCode
 
 
 class Day3(AdventOfCode):
@@ -27,7 +28,7 @@ class Day3(AdventOfCode):
         """
         Extracts digits from a string of the form 'mul(x,y)'.
         """
-        match = re.search(r'mul\((\d+),(\d+)\)', string)
+        match = re.search(r"mul\((\d+),(\d+)\)", string)
         if match:
             return int(match.group(1)), int(match.group(2))
         else:
@@ -41,7 +42,6 @@ class Day3(AdventOfCode):
         print(res)
         assert res == 80570939
         return res
-        
 
 
 Day3().run()

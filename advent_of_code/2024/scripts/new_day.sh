@@ -4,7 +4,7 @@ set -euo pipefail
 
 DAY=$1
 PYTHON_BOILERPLATE=$(cat <<-END
-from advent_of_code import AdventOfCode
+from util.advent_of_code import AdventOfCode
 class Day$DAY(AdventOfCode):
     def __init__(self):
         super().__init__($DAY)
@@ -17,6 +17,7 @@ class Day$DAY(AdventOfCode):
 
     def part_two(self, input):
         pass
+Day$DAY().run()
 END
 )
 
@@ -35,7 +36,7 @@ else
 fi
 
 # Create python file for the day with boilerplate, if it doesn't exist
-FILE="./advent_of_code/2024/python/days/$DAY.py"
+FILE="./advent_of_code/2024/python/$DAY.py"
 if [ -f "$FILE" ]; then
     echo "Python file for day $DAY already exists"
 else 
