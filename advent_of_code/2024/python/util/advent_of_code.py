@@ -1,6 +1,7 @@
 from abc import abstractmethod
 
 from util.input import read_input
+from util.timer import timed
 
 
 class AdventOfCode:
@@ -8,9 +9,11 @@ class AdventOfCode:
         self.day = day
 
     def run(self):
-        input = read_input(f"{self.day}.txt", self.parse_input)
-        self.part_one(input)
-        self.part_two(input)
+        input = timed(read_input, print_result=False)(
+            f"{self.day}.txt", self.parse_input
+        )
+        timed(self.part_one)(input)
+        timed(self.part_two)(input)
 
     @abstractmethod
     def part_one(self, input):

@@ -21,7 +21,6 @@ class Day3(AdventOfCode):
         matches = re.findall(pattern, input)
         digit_pairs = [self.__extract_digits(x) for x in matches]
         res = sum([a * b for a, b in digit_pairs])
-        print(res)
         return res
 
     def __extract_digits(self, string):
@@ -39,7 +38,6 @@ class Day3(AdventOfCode):
         matches = re.findall(pattern, "do()" + input)
         enabled = "".join(matches)
         res = self.part_one(enabled)
-        print(res)
         assert res == 80570939
         return res
 

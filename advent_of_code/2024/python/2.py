@@ -20,7 +20,6 @@ class Day2(AdventOfCode):
         """
         reports_check = [self.__is_safe(report) for report in input]
         res = sum(1 for report in reports_check if report)
-        print(res)
         assert res == 663
         return res
 
@@ -38,7 +37,6 @@ class Day2(AdventOfCode):
                     if self.__is_safe(report[:i] + report[i + 1 :]):
                         safe_count += 1
                         break
-        print(safe_count)
         assert safe_count == 692
         return safe_count
 

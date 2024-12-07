@@ -112,14 +112,12 @@ class Day4(AdventOfCode):
     def part_one(self, input):
         search = WordSearch(input, all_directions, "XMAS")
         found, _ = search.find_all()
-        print(found)
         assert found == 2397
         return found
 
     def part_two(self, input):
         search = WordSearch(input, diagonal_directions, "MAS")
         found, _ = search.find_states_intersecting_letter(1)  # 1 is index of 'A'
-        print(found)
         assert found == 1824
         return found
 

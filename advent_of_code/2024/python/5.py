@@ -109,12 +109,14 @@ class Day5(AdventOfCode):
 
     def part_one(self, input):
         sum = self.sum_medians(input.correct_updates)
-        print(sum)
+        assert sum == 5747
+        return sum
 
     def part_two(self, input):
         reorder = [input.reorder(update) for update in input.incorrect_updates]
         sum = self.sum_medians(reorder)
-        print(sum)
+        assert sum == 5502
+        return sum
 
 
 Day5().run()

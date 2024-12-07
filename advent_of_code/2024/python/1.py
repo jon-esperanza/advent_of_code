@@ -24,7 +24,6 @@ class Day1(AdventOfCode):
             abs(input[0][i] - input[1][i]) for i in range(len(input[0]))
         ]
         res = sum(manhattan_distances)
-        print(res)
         assert res == 1319616
         return res
 
@@ -44,7 +43,6 @@ class Day1(AdventOfCode):
 
         similarity_scores = [id * cnt for id, cnt in frequencies.items()]
         res = sum(similarity_scores)
-        print(res)
         assert res == 27267728
         return res
 
